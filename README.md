@@ -12,9 +12,8 @@ Este repositório contém uma implementação para resolver o problema das N Rai
 
 ---
 
-**README.md**
 
-```markdown
+
 # Resolução Paralela e Distribuída do Problema das N Rainhas
 
 ## Descrição
@@ -66,10 +65,10 @@ Este projeto tem como objetivo implementar o problema das N Rainhas utilizando a
 
 Os testes foram realizados em um ambiente com as seguintes especificações:
 
-- **CPU**: Intel Core i7-9750H, 6 núcleos, 12 threads
-- **RAM**: 16 GB DDR4
-- **Sistema Operacional**: Ubuntu 20.04
-- **Python**: 3.8
+- **CPU**: Intel Core i7-9750H, 4 núcleos, 8 threads
+- **RAM**: 8 GB DDR4
+- **Sistema Operacional**: Windows 11
+- **Python**: 3.11.1
 
 ## Resultados de Desempenho
 

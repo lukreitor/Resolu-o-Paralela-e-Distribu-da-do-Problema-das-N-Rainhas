@@ -2,30 +2,22 @@
 
 ---
 
-**Título do Repositório:**
-
-`Resolução Paralela e Distribuída do Problema das N Rainhas`
-
-**Descrição:**
-
-Este repositório contém uma implementação para resolver o problema das N Rainhas utilizando três abordagens distintas: sequencial, paralela e distribuída. O objetivo é comparar o desempenho e a escalabilidade de cada abordagem. A implementação está disponível em Python e utiliza threads para a abordagem paralela e sockets para a abordagem distribuída.
-
----
-
-**README.md**
-
-```markdown
-# Resolução Paralela e Distribuída do Problema das N Rainhas
-
 ## Descrição
 
-Este projeto visa resolver o problema das N Rainhas utilizando três abordagens diferentes:
+Este repositório contém uma implementação para resolver o problema das N Rainhas utilizando três abordagens distintas:
 
-1. **Sequencial**: Implementação padrão sem paralelismo.
-2. **Paralela**: Uso de threads para dividir o trabalho.
-3. **Distribuída**: Comunicação via sockets entre cliente e servidor.
+1. **Sequencial**: Implementação padrão sem paralelismo. Algoritmo que resolve o problema de forma recursiva e sequencial.
+2. **Paralela**: Uso de threads para dividir o trabalho. Utiliza threads para tentar resolver o problema em paralelo, dividindo o processamento entre as rainhas.
+3. **Distribuída**: Modelo cliente-servidor que divide o processamento entre diferentes máquinas para resolver o problema de forma distribuída.
+
+
+## Contexto do problema
+
+O objetivo é comparar o desempenho e a escalabilidade de cada abordagem. A implementação está disponível em Python e utiliza threads para a abordagem paralela e sockets para a abordagem distribuída
 
 O problema das N Rainhas consiste em posicionar N rainhas em um tabuleiro de xadrez NxN de forma que nenhuma rainha ataque outra. É uma generalização do problema clássico das 8 Rainhas. Para uma introdução ao problema, veja este [vídeo explicativo](https://www.youtube.com/watch?v=OzZU9JnK5GY).
+
+---
 
 ## Instalação
 
@@ -38,7 +30,7 @@ obs: as dependencias do nosso projeto são nativas do python, então nao utiliza
 
 ## Execução
 
-### 0. Rodar o server que roda todas as implementações e gera os arquivos 
+### 1. Rodar o server que roda todas as implementações e gera os arquivos 
 
 Para rodar a versão sequencial, paralela e distribuida ao mesmo tempo, execute:
 
@@ -48,28 +40,15 @@ python server.py
 
 O script irá testar diferentes tamanhos de N e gerar um arquivo chamado `comparacao_desempenho.md` com os resultados.
 
-Aqui está uma sugestão profissional para o arquivo `README.md` que descreve a implementação e os resultados obtidos nos testes de desempenho do problema das N Rainhas:
-
----
-
-# Projeto: Resolução do Problema das N Rainhas
-
-Este projeto tem como objetivo implementar o problema das N Rainhas utilizando abordagens sequencial, paralela e distribuída. Além disso, analisamos o desempenho e a escalabilidade de cada abordagem, identificando possíveis gargalos e propondo melhorias.
-
-## Implementações
-
-1. **Sequencial**: Algoritmo que resolve o problema de forma recursiva e sequencial.
-2. **Paralela**: Utiliza threads para tentar resolver o problema em paralelo, dividindo o processamento entre as rainhas.
-3. **Distribuída**: Modelo cliente-servidor que divide o processamento entre diferentes máquinas para resolver o problema de forma distribuída.
 
 ## Configuração da Máquina
 
 Os testes foram realizados em um ambiente com as seguintes especificações:
 
-- **CPU**: Intel Core i7-9750H, 6 núcleos, 12 threads
-- **RAM**: 16 GB DDR4
-- **Sistema Operacional**: Ubuntu 20.04
-- **Python**: 3.8
+- **CPU**: Intel Core i7-9750H, 4 núcleos, 8 threads
+- **RAM**: 8 GB DDR4
+- **Sistema Operacional**: Windows 11
+- **Python**: 3.11.1
 
 ## Resultados de Desempenho
 
@@ -113,7 +92,7 @@ A solução distribuída apresentou tempos mais consistentes para tabuleiros gra
 
 1. **Gerenciamento de Threads**: A implementação paralela apresentou problemas de desempenho em cenários onde a criação e gerenciamento de múltiplas threads resultou em overhead significativo.
 2. **Backtracking e Overhead**: O backtracking nas soluções maiores resultou em overhead substancial, principalmente na solução distribuída.
-3. **Limitações de Comunicação**: A implementação distribuída sofreu com latência nas conexões entre cliente e servidor, afetando o desempenho em grandes tabuleiros.
+3. **Limitações de Comunicação**: A implementação distribuída sofreu com latência nas conexões entre cliente e servidor, afetando o desempenho em grandes tabuleiros. Não conseguimos implementar com vários nós e máquinas diferentes.
 
 ## Conclusão
 
